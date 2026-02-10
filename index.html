@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Agence Immobilière — Accueil</title>
+  <meta name="description" content="Agence immobilière : vente, location, estimation, accompagnement." />
+  <style>
+    :root{
+      --bg:#0b1220; --card:#111a2e; --text:#e9eefc; --muted:#b7c0dd;
+      --brand:#4f8cff; --brand2:#31d6a3; --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:linear-gradient(180deg,#071028, #0b1220 40%); color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:18px}
+    header{position:sticky;top:0;background:rgba(7,16,40,.75);backdrop-filter: blur(10px);border-bottom:1px solid var(--border);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:var(--shadow)}
+    .menu{display:flex;gap:14px;flex-wrap:wrap}
+    .menu a{padding:10px 12px;border-radius:12px;color:var(--muted)}
+    .menu a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,var(--brand),#2e6dff);border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow);font-weight:700}
+    .btn:hover{transform:translateY(-1px)}
+    .hero{padding:40px 0 18px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+    .card{background:rgba(17,26,46,.82);border:1px solid var(--border);border-radius:22px;box-shadow:var(--shadow)}
+    .hero-card{padding:26px}
+    h1{margin:0 0 10px;font-size:36px;line-height:1.1}
+    p{margin:0 0 14px;color:var(--muted);line-height:1.6}
+    .kpis{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .kpi{padding:10px 12px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid var(--border)}
+    .kpi b{display:block}
+    .form{padding:18px}
+    .form h3{margin:0 0 10px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    input,select,textarea{
+      width:100%;padding:12px 12px;border-radius:14px;background:rgba(255,255,255,.05);
+      border:1px solid var(--border);color:var(--text);outline:none
+    }
+    textarea{min-height:92px;resize:vertical}
+    .small{font-size:12px;color:var(--muted)}
+    section{padding:22px 0}
+    .section-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:12px}
+    .section-title h2{margin:0;font-size:22px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .prop{overflow:hidden}
+    .prop .img{
+      height:160px;background:
+        radial-gradient(1200px 300px at 20% 0%, rgba(79,140,255,.35), transparent 50%),
+        radial-gradient(900px 300px at 80% 20%, rgba(49,214,163,.25), transparent 55%),
+        linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+      border-bottom:1px solid var(--border)
+    }
+    .prop .body{padding:14px}
+    .pill{display:inline-flex;gap:6px;align-items:center;font-size:12px;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--border);color:var(--muted)}
+    .price{font-size:18px;font-weight:900;margin:8px 0 6px}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+    .prop a.more{display:inline-block;margin-top:10px;color:var(--text);font-weight:700}
+    footer{border-top:1px solid var(--border);padding:20px 0 34px;color:var(--muted)}
+    .whats{position:fixed;right:16px;bottom:16px}
+    .whats a{display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border-radius:999px;background:linear-gradient(135deg,#25D366,#12b85a);color:#071028;font-weight:900;box-shadow:var(--shadow)}
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      h1{font-size:30px}
+      .row{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <div class="badge"></div>
+      <div>
+        <div>Ton Agence</div>
+        <div class="small">Immobilier • Vente • Location</div>
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="#biens">Biens</a>
+      <a href="#services">Services</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Demander une estimation</a>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero" id="accueil">
+    <div class="hero-grid">
+      <div class="card hero-card">
+        <h1>Ton agence immobilière, en ligne — simplement.</h1>
+        <p>
+          Vente, location, estimation, accompagnement. Présente tes biens et reçois des demandes
+          directement sur WhatsApp ou par email.
+        </p>
+        <div class="kpis">
+          <div class="kpi"><b>Réponse rapide</b><span class="small">WhatsApp + formulaire</span></div>
+          <div class="kpi"><b>Biens mis en avant</b><span class="small">cartes + détails</span></div>
+          <div class="kpi"><b>Site gratuit</b><span class="small">hébergé sur GitHub</span></div>
+        </div>
+      </div>
+
+      <div class="card form" id="contact">
+        <h3>Contact express</h3>
+        <div class="row">
+          <input id="name" placeholder="Nom" />
+          <input id="phone" placeholder="Téléphone" />
+        </div>
+        <div class="row" style="margin-top:10px">
+          <select id="need">
+            <option value="Je veux acheter">Je veux acheter</option>
+            <option value="Je veux louer">Je veux louer</option>
+            <option value="Je veux vendre">Je veux vendre</option>
+            <option value="Je veux estimer">Je veux estimer</option>
+          </select>
+          <input id="city" placeholder="Ville / Quartier" />
+        </div>
+        <textarea id="msg" style="margin-top:10px" placeholder="Message (budget, surface, type...)"></textarea>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+          <button class="btn" onclick="sendWhatsApp()">Envoyer sur WhatsApp</button>
+          <button class="btn" onclick="sendEmail()">Envoyer par Email</button>
+        </div>
+        <p class="small" style="margin-top:10px">Astuce : change le numéro WhatsApp et l’email dans le code.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="biens">
+    <div class="section-title">
+      <h2>Biens à la une</h2>
+      <div class="small">Modifie ces cartes pour tes annonces</div>
+    </div>
+    <div class="grid">
+      <div class="card prop">
+        <div class="img"></div>
+        <div class="body">
+          <span class="pill">Appartement • Vente</span>
+          <div class="price">1 250 000 MAD</div>
+          <div class="meta">
+            <span>📍 Casablanca</span><span>🛏 2</span><span>🛁 1</span><span>📐 92 m²</span>
+          </div>
+          <a class="more" href="#contact" onclick="prefill('Appartement 2ch à Casablanca')">Demander une visite →</a>
+        </div>
+      </div>
+      <div class="card prop">
+        <div class="img"></div>
+        <div class="body">
+          <span class="pill">Villa • Vente</span>
+          <div class="price">4 900 000 MAD</div>
+          <div class="meta">
+            <span>📍 Rabat</span><span>🛏 4</span><span>🛁 3</span><span>📐 320 m²</span>
+          </div>
+          <a class="more" href="#contact" onclick="prefill('Villa 4ch à Rabat')">Demander une visite →</a>
+        </div>
+      </div>
+      <div class="card prop">
+        <div class="img"></div>
+        <div class="body">
+          <span class="pill">Studio • Location</span>
+          <div class="price">5 500 MAD / mois</div>
+          <div class="meta">
+            <span>📍 Marrakech</span><span>🛏 1</span><span>🛁 1</span><span>📐 45 m²</span>
+          </div>
+          <a class="more" href="#contact" onclick="prefill('Studio à louer à Marrakech')">Demander une visite →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-title">
+      <h2>Nos services</h2>
+      <div class="small">Clair, simple, professionnel</div>
+    </div>
+    <div class="grid">
+      <div class="card" style="padding:16px">
+        <h3 style="margin:0 0 6px">Vente</h3>
+        <p>Diffusion, visites, négociation, accompagnement jusqu’à l’acte.</p>
+      </div>
+      <div class="card" style="padding:16px">
+        <h3 style="margin:0 0 6px">Location</h3>
+        <p>Sélection des locataires, constitution du dossier, état des lieux.</p>
+      </div>
+      <div class="card" style="padding:16px">
+        <h3 style="margin:0 0 6px">Estimation</h3>
+        <p>Évaluation réaliste basée sur le marché et les caractéristiques du bien.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="apropos">
+    <div class="section-title">
+      <h2>À propos</h2>
+    </div>
+    <div class="card" style="padding:16px">
+      <p>
+        <b>Ton Agence</b> accompagne les clients dans l’achat, la vente et la location.
+        Ajoute ici ton histoire, ta zone (ex: Casablanca/Rabat…), et tes avantages.
+      </p>
+      <p class="small">📌 Remplace “Ton Agence” partout par ton vrai nom.</p>
+    </div>
+  </section>
+</main>
+
+<div class="whats">
+  <a href="#" onclick="sendWhatsApp();return false;">💬 WhatsApp</a>
+</div>
+
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Ton Agence — Tous droits réservés</div>
+    <div class="small">Téléphone: +212 6XX XX XX XX • Email: contact@tonagence.ma</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // TODO: Mets ton numéro WhatsApp (format international sans espaces)
+  const WHATSAPP_NUMBER = "212600000000";
+  // TODO: Mets ton email
+  const AGENCY_EMAIL = "contact@tonagence.ma";
+
+  function prefill(text){
+    document.getElementById("msg").value = "Bonjour, je suis intéressé par : " + text + ".";
+    location.hash = "#contact";
+  }
+
+  function buildMessage(){
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const need = document.getElementById("need").value;
+    const city = document.getElementById("city").value.trim();
+    const msg  = document.getElementById("msg").value.trim();
+
+    return `Nom: ${name}\nTéléphone: ${phone}\nBesoin: ${need}\nVille: ${city}\n\nMessage:\n${msg}`;
+  }
+
+  function sendWhatsApp(){
+    const text = encodeURIComponent(buildMessage());
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+    window.open(url, "_blank");
+  }
+
+  function sendEmail(){
+    const subject = encodeURIComponent("Demande via le site");
+    const body = encodeURIComponent(buildMessage());
+    window.location.href = `mailto:${AGENCY_EMAIL}?subject=${subject}&body=${body}`;
+  }
+</script>
+
+</body>
+</html>
